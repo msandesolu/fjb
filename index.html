@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FireJoeBrady.com</title>
+	</head>
+	<body>
+		<style>
+			h1 {
+				text-align: center;
+				font-size: 100px;
+				font-family: "Arial";
+			}
+			body {
+				margin: 0 auto;
+				overflow: hidden;
+				max-width: 1000px;
+			}
+
+			img {
+				position: absolute;
+				height: auto;
+				width: 250px;
+				animation: spin 1s linear infinite;
+			}
+
+			@keyframes spin {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+		<div>
+			<h1>FireJoeBrady.com</h1>
+			<img
+				id="brady"
+				src="brady2.png" />
+		</div>
+		<script>
+			const img = document.getElementById("brady");
+			let x = 100;
+			let y = 100;
+			let dx = 10; // horizontal speed
+			let dy = 13; // vertical speed
+
+			function moveImage() {
+				const width = window.innerWidth;
+				const height = window.innerHeight;
+
+				x += dx;
+				y += dy;
+
+				// Bounce off edges
+				if (x + img.width >= width || x <= 0) dx = -dx;
+				if (y + img.height >= height || y <= 0) dy = -dy;
+
+				img.style.left = x + "px";
+				img.style.top = y + "px";
+
+				requestAnimationFrame(moveImage);
+			}
+
+			// Wait for image to load before starting animation
+			img.onload = moveImage;
+		</script>
+	</body>
+</html>
