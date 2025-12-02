@@ -1,69 +1,249 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>FireJoeBrady.com</title>
-	</head>
-	<body>
-		<style>
-			h1 {
-				text-align: center;
-				font-size: 100px;
-				font-family: "Arial";
-			}
-			body {
-				margin: 0 auto;
-				overflow: hidden;
-				max-width: 1000px;
-			}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Buffalo Bills Coaching Circus: A Performance Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bills-blue': '#00338D',
+                        'bills-red': '#C60C30',
+                        'bills-blue-light': '#0A55A7', // A slightly lighter blue for hover/accents
+                        'bills-red-light': '#E0213B', // A slightly lighter red for hover/accents
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            background-color: #f0f2f5; /* Lighter background to make Bills colors pop */
+            color: #374151; /* Darker gray text */
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+        .header-fixed {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .section-padding {
+            padding-top: 3rem; /* General top padding for sections */
+            scroll-margin-top: 6rem; /* Ensures the fixed header doesn't overlap when navigating to anchors */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="flex flex-col">
 
-			img {
-				position: absolute;
-				height: auto;
-				width: 250px;
-				animation: spin 1s linear infinite;
-			}
+    <!-- Fixed Header -->
+    <header class="header-fixed w-full py-4 px-6 flex justify-between items-center border-b border-gray-200">
+        <h1 class="text-2xl font-bold text-bills-blue">The Bills Coaching Circus Review</h1>
+        <div class="relative">
+            <button id="dropdownTrigger" class="bg-bills-red hover:bg-bills-red-light text-white font-medium py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-bills-blue focus:ring-opacity-75 transition duration-150 ease-in-out">
+                Navigate the Sideshow
+                <svg class="ml-2 -mr-0.5 h-4 w-4 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 a1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </button>
+            <div id="dropdownMenu" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20 hidden">
+                <a href="#overview" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Welcome to the Main Event</a>
+                <a href="#analysis" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Behind the Curtain</a>
+                <a href="#social-sentiment" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">The Roaring Crowd</a>
+                <a href="#memes" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">The Meme-atorium</a>
+                <a href="#community" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">The Charity Bucket</a>
+            </div>
+        </div>
+    </header>
 
-			@keyframes spin {
-				from {
-					transform: rotate(0deg);
-				}
-				to {
-					transform: rotate(360deg);
-				}
-			}
-		</style>
-		<div>
-			<h1>FireJoeBrady.com</h1>
-			<img
-				id="brady"
-				src="brady2.png" />
-		</div>
-		<script>
-			const img = document.getElementById("brady");
-			let x = 100;
-			let y = 100;
-			let dx = 10; // horizontal speed
-			let dy = 13; // vertical speed
+    <main class="flex-grow container mx-auto px-4 py-8">
 
-			function moveImage() {
-				const width = window.innerWidth;
-				const height = window.innerHeight;
+        <!-- Section 1: Overview -->
+        <section id="overview" class="section-padding bg-white shadow-lg rounded-xl p-8 mb-10 border-l-4 border-bills-red">
+            <h2 class="text-4xl font-extrabold text-bills-blue mb-6 border-b-2 pb-2 border-bills-red-light">Welcome to the Main Event: Understanding the Current... *Situation*</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                Step right up, folks! This page aims to provide a <span class="font-bold text-bills-red">hilarious</span> (and slightly painful) look at the recent performance and strategic decisions surrounding a particular coaching role. We'll explore various facets, including on-field <span class="font-bold">antics</span>, tactical <span class="font-bold">missteps</span>, and public <span class="font-bold text-bills-red">outrage</span>, to foster a deeper understanding of the ongoing discussions (and provide some much-needed comic relief).
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                The goal is to present information in an organized manner, allowing for informed discussion and evaluation of the current trajectory... or lack thereof. Grab your popcorn!
+            </p>
+        </section>
 
-				x += dx;
-				y += dy;
+        <!-- Section 2: Performance Analysis -->
+        <section id="analysis" class="section-padding bg-white shadow-lg rounded-xl p-8 mb-10 border-l-4 border-bills-red">
+            <h2 class="text-4xl font-extrabold text-bills-blue mb-6 border-b-2 pb-2 border-bills-red-light">Behind the Curtain: The Performance (or Lack Thereof) Analysis</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Our 'Gourmet' Offensive Play-Calling</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Recent game analyses have highlighted <span class="italic font-medium text-bills-red">baffling</span> trends in offensive play-calling. Data points suggest patterns in situational <span class="font-bold">cluelessness</span>, red-zone <span class="font-bold">fumbles</span>, and an utter <span class="font-bold text-bills-blue">refusal</span> to adapt to defensive schemes. Further examination is needed to correlate these patterns with overall team performance and player utilization (or lack thereof).
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Third-down <span class="font-medium text-bills-blue">puzzles</span> (solved by punting).</li>
+                        <li>Yards per play in <span class="font-medium text-bills-red">critical collapses</span>.</li>
+                        <li>Red zone <span class="font-medium text-bills-blue">field goal</span> percentage (we prefer 3 points).</li>
+                        <li>Adjustments made during games (wait, were there any?).</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Player Development & Utilization (Are We Sure About This?)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        The development of key players and their effective utilization within the current system is a <span class="italic font-medium text-bills-red">mystery</span>. Observations include how talent is being deployed (often poorly), opportunities for emerging players (rarely), and the overall synergy of the roster under the existing coaching philosophy (what philosophy?).
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Impact of scheme on player statistics (usually negative).</li>
+                        <li>Growth trajectory of young talent (stagnant, like our offense).</li>
+                        <li>Injuries and roster management (send in the clowns for medical advice!).</li>
+                        <li>Overall team chemistry and morale (send in the therapists!).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-				// Bounce off edges
-				if (x + img.width >= width || x <= 0) dx = -dx;
-				if (y + img.height >= height || y <= 0) dy = -dy;
+        <!-- Section 3: Social Sentiment (Tweets) -->
+        <section id="social-sentiment" class="section-padding bg-white shadow-lg rounded-xl p-8 mb-10 border-l-4 border-bills-red">
+            <h2 class="text-4xl font-extrabold text-bills-blue mb-6 border-b-2 pb-2 border-bills-red-light">The Roaring Crowd: Social Media's Take (Bring Popcorn!)</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                Social media platforms often serve as a <span class="font-bold text-bills-red">dumpster fire</span> for public sentiment. Below is a <span class="italic">mock</span> display of public tweets related to Joe Brady, providing insights into fan reactions and discussions (mostly screams into the void).
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                <input type="text" placeholder="Search for more tears and memes about Joe Brady..." class="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bills-blue focus:border-transparent text-gray-800" />
+                <button class="bg-bills-blue hover:bg-bills-blue-light text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-150 ease-in-out">
+                    Search Tweets (Placeholder)
+                </button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-100 rounded-lg p-4 shadow-sm border border-gray-200">
+                    <p class="font-bold text-gray-900">@BillsFanatic716</p>
+                    <p class="text-gray-700 text-sm mb-2">Nov 12, 2023</p>
+                    <p class="text-gray-800">"Another 3rd & long screen pass? My grandma saw that coming from her rocking chair. #BillsMafia #FireBrady"</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 shadow-sm border border-gray-200">
+                    <p class="font-bold text-gray-900">@WNYSportsTalk</p>
+                    <p class="text-gray-700 text-sm mb-2">Nov 13, 2023</p>
+                    <p class="text-gray-800">"At this point, I think my Madden playbook has more creativity. What are we even doing out there? #Bills #OffensiveStruggles"</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 shadow-sm border border-gray-200">
+                    <p class="font-bold text-gray-900">@BuffaloBanter</p>
+                    <p class="text-gray-700 text-sm mb-2">Nov 12, 2023</p>
+                    <p class="text-gray-800">"Is 'run it up the middle for no gain' considered a sophisticated strategy now? Asking for a friend (my therapist). #GoBills"</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 shadow-sm border border-gray-200">
+                    <p class="font-bold text-gray-900">@Bills_Or_Bust</p>
+                    <p class="text-gray-700 text-sm mb-2">Nov 11, 2023</p>
+                    <p class="text-gray-800">"My disappointment is immeasurable, and my day is ruined. Again. #BillsMafiaForever #ButWhy"</p>
+                </div>
+            </div>
+            <div class="mt-8 p-4 bg-gray-100 rounded-lg text-gray-600 italic border border-gray-200">
+                <p>Note: Live tweet search functionality requires backend integration with a social media API. These tweets are purely fictional and for satirical purposes only (but you know, they *feel* real).</p>
+            </div>
+        </section>
 
-				img.style.left = x + "px";
-				img.style.top = y + "px";
+        <!-- Section 4: Memes & Humor -->
+        <section id="memes" class="section-padding bg-white shadow-lg rounded-xl p-8 mb-10 border-l-4 border-bills-red">
+            <h2 class="text-4xl font-extrabold text-bills-blue mb-6 border-b-2 pb-2 border-bills-red-light">The Meme-atorium: Our Collective Laughter (and Tears)</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                Humor is how we cope, folks! Here you'll find a collection of memes related to Joe Brady or the Bills, reflecting various fan perspectives in a <span class="font-bold text-bills-red">hilariously painful</span> manner.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-100 rounded-lg p-4 flex flex-col items-center justify-center text-gray-700 h-48 border border-gray-200">
+                    <p class="text-xl font-semibold mb-2 text-bills-blue">"The 'Run it up the middle' Play Call"</p>
+                    <p class="text-center">A picture of Sisyphus pushing a boulder uphill, but the boulder is a football and Sisyphus is a Bills running back on 2nd & 8.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 flex flex-col items-center justify-center text-gray-700 h-48 border border-gray-200">
+                    <p class="text-xl font-semibold mb-2 text-bills-blue">"Josh Allen's Face After a Screen Pass"</p>
+                    <p class="text-center">A classic 'visible confusion' meme, but it's Josh Allen looking exasperated after another predictable play call.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 flex flex-col items-center justify-center text-gray-700 h-48 border border-gray-200">
+                    <p class="text-xl font-semibold mb-2 text-bills-blue">"Bills Mafia's Mood on Monday Morning"</p>
+                    <p class="text-center">The 'This is Fine' dog meme, but the room is on fire with Buffalo wings and a broken table.</p>
+                </div>
+            </div>
+        </section>
 
-				requestAnimationFrame(moveImage);
-			}
+        <!-- Section 5: Community Contributions (Memecoin Address) -->
+        <section id="community" class="section-padding bg-white shadow-lg rounded-xl p-8 mb-10 border-l-4 border-bills-red">
+            <h2 class="text-4xl font-extrabold text-bills-blue mb-6 border-b-2 pb-2 border-bills-red-light">The Charity Bucket: Community Support (for Our Sanity)</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                For those interested in supporting community initiatives or projects related to this <span class="font-bold text-bills-red">ongoing saga</span>, a placeholder for a memecoin address is provided below. This could be used for donations, community pooling, or other fan-driven efforts (like therapy funds for long-suffering fans, or perhaps a fund for a new offensive coordinator).
+            </p>
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 p-4 rounded-md mb-6">
+                <p class="font-bold text-xl mb-2">Memecoin Address Placeholder (for our collective healing):</p>
+                <p class="break-all font-mono text-lg select-all">
+                    0xAbC123DeF456GhI789JkL012MnOP345QrS678TuVwXyZ
+                </p>
+                <button onclick="navigator.clipboard.writeText('0xAbC123DeF456GhI789JkL012MnOP345QrS678TuVwXyZ')" class="mt-4 bg-bills-red hover:bg-bills-red-light text-white font-medium py-2 px-4 rounded-lg shadow-md transition duration-150 ease-in-out">
+                    Copy Address (and pray for better play calls)
+                </button>
+                <p class="text-sm mt-2">Always verify addresses before sending funds. This is a satire site, after all. Or is it?</p>
+            </div>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                This section serves as a hub for community-driven initiatives. Please engage responsibly and understand the nature of memecoins (and our enduring pain).
+            </p>
+        </section>
 
-			// Wait for image to load before starting animation
-			img.onload = moveImage;
-		</script>
-	</body>
+    </main>
+
+    <footer class="w-full bg-bills-blue text-white py-6 text-center text-sm">
+        <p>&copy; 2023 Bills Mafia Community Discussion. All rights reserved. This page is for informational, discussion, and therapeutic purposes only.</p>
+    </footer>
+
+    <script>
+        // Dropdown functionality
+        const dropdownTrigger = document.getElementById('dropdownTrigger');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        dropdownTrigger.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', (event) => {
+            if (!dropdownTrigger.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+
+        // Close dropdown after clicking a link
+        dropdownMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                dropdownMenu.classList.add('hidden');
+            });
+        });
+
+        // Optional: Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
